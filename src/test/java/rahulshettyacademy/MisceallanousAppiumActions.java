@@ -27,6 +27,7 @@ public class MisceallanousAppiumActions extends BaseTest{
 		driver.findElement(By.id("android:id/checkbox")).click();
 		DeviceRotation landScape = new DeviceRotation(0, 0, 90);
 		driver.rotate(landScape);		
+		
 		driver.findElement(By.xpath("(//android.widget.RelativeLayout)[2]")).click(); 
 		String alertTitle = driver.findElement(By.id("android:id/alertTitle")).getText();
 		Assert.assertEquals(alertTitle, "WiFi settings");	
